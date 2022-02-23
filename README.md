@@ -20,5 +20,22 @@ const reducer=(state=initialSate,action)=>{
     if(action.type ==="BUY_LAPTOP){
         return {numOfLaptops:state.numOfLaptops-1 }
     }
+
+    else {
+     return state;
+ }
 }
 ```
++ For every updation to connect store or sync store with application we hve to `subscribe` function.
++ Finally you have to dispatch a function
++ To create rootReducer for all reucers in your application use `combineReducer`
+
++ Middleware
+    - usually middleware used for logging,performing asynchronous operations operations etc...s
+    - redux-logger
+    - `npm i redux-logger`
+    - import it at top level and import appylMiddleware 
+    - in the store creation pass logger for applyMiddleware
+    - in the console we can check status of state with comparison
+    - Async operations
+    - `npm i redux-thunk`
